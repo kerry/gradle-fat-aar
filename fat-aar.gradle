@@ -9,18 +9,6 @@ import com.android.utils.ILogger
 import com.google.common.base.Charsets
 import com.google.common.io.Files
 
-/**
- * Fat AAR Lib generator v 0.2.1
- * Target Gradle Version :: 2.2.0
- *
- * Latest version available at https://github.com/adwiv/android-fat-aar
- * Please report issues at https://github.com/adwiv/android-fat-aar/issues
- *
- * This code is in public domain.
- *
- * Use at your own risk and only if you understand what it does. You have been warned ! :-)
- */
-
 buildscript {
     repositories {
         jcenter()
