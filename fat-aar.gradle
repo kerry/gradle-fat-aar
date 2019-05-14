@@ -388,7 +388,11 @@ task collectRClass {
     }
 }
 
-task embedRClass(type: org.gradle.jvm.tasks.Jar, dependsOn: collectRClass) {
+task deleteRFolder(type: Delete, dependsOn: collectRClass) {
+    delete "${build_dir}/intermediates/packaged-classes/release/libs"
+}
+
+task embedRClass(type: org.gradle.jvm.tasks.Jar, dependsOn: deleteRFolder) {
     doFirst {
         println "EMBED R CLASS => Type: Jar"
         mkdir "${build_dir}/intermediates/packaged-classes/release/libs"
